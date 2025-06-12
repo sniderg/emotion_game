@@ -3,37 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Birthday Party Adventure</title>
+    <title>Emotion Games Hub</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .game-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .game-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .game-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .game-description {
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        header {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            color: #333;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Emotion Games Hub</h1>
+        <p class="subtitle">Interactive stories to help learn about emotions and social situations</p>
+    </header>
 
-    <div id="game-container">
-        <div id="illustration-box" class="illustration"></div>
-        <p id="story-text-box" class="story-text"></p>
-        <div class="choices">
-            <button id="choice1" class="choice-btn"></button>
-            <button id="choice2" class="choice-btn"></button>
+    <div class="game-grid">
+        <a href="birthday-party.html" class="game-card">
+            <div class="game-icon">🎂</div>
+            <h2 class="game-title">The Birthday Party Adventure</h2>
+            <p class="game-description">Join Leo's birthday party and learn how to handle social situations, manage emotions, and practice flexible thinking.</p>
+        </a>
+        
+        <!-- More game cards can be added here as new games are created -->
+        <div class="game-card" style="opacity: 0.7">
+            <div class="game-icon">🎮</div>
+            <h2 class="game-title">Coming Soon</h2>
+            <p class="game-description">More interactive stories and games are on the way!</p>
         </div>
     </div>
-
-    <div id="end-screen">
-        <div class="illustration">🥳</div>
-        <!-- <img src="images/win.png" alt="A trophy or star"> -->
-        <h1>Congratulations!</h1>
-        <p class="story-text">You did it! You navigated the party, had a good time, and knew just what your body and brain needed. That was awesome flexible thinking!</p>
-    </div>
-
-    <div id="reset-screen">
-        <!-- <div class="illustration">😵</div> -->
-         <img src="images/sad.png" alt="A tired face">
-        <h1>Oh no! It's too much!</h1>
-        <p>The party became too loud, too fast, and too overwhelming. That's okay! Sometimes we need a break. Let's take a deep breath and try again from the start.</p>
-        <button id="reset-button">Start Over</button>
-    </div>
-
-    <!-- Load configuration file FIRST, then the main script -->
-    <script src="js/config.js"></script>
-    <script src="js/script.js"></script>
 </body>
 </html>

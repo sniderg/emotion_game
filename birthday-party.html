@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Birthday Party Adventure</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="illustration-box" class="illustration"></div>
+        <p id="story-text-box" class="story-text"></p>
+        <div class="choices">
+            <button id="choice1" class="choice-btn"></button>
+            <button id="choice2" class="choice-btn"></button>
+        </div>
+    </div>
+
+    <div id="end-screen">
+        <div class="illustration">🥳</div>
+        <h1>Congratulations!</h1>
+        <p class="story-text">You did it! You navigated the party, had a good time, and knew just what your body and brain needed. That was awesome flexible thinking!</p>
+        <a href="index.html" class="choice-btn">Back to Games</a>
+    </div>
+
+    <div id="reset-screen">
+        <img src="images/sad.png" alt="A tired face">
+        <h1>Oh no! It's too much!</h1>
+        <p>The party became too loud, too fast, and too overwhelming. That's okay! Sometimes we need a break. Let's take a deep breath and try again from the start.</p>
+        <button id="reset-button">Start Over</button>
+        <a href="index.html" class="choice-btn">Back to Games</a>
+    </div>
+
+    <!-- Load configuration file FIRST, then the main script -->
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 
